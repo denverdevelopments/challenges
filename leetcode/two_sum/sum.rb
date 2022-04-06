@@ -1,8 +1,9 @@
 # @param {Integer[]} nums
 # @param {Integer} target
 # @return {Integer[]}
+
 def two_sum(nums, target)
-hash = Hash.new
+  hash = Hash.new
   nums.each_with_index do |item,index|
     diff = target - item
     if nums.uniq.length == nums.length
@@ -12,12 +13,24 @@ hash = Hash.new
         hash[x] = diff
       end
     elsif
-      hash[index] = item
-      nums.delete_at(index)
-      # nums[index].pop
-      x = nums.find_index(diff) + 1
-      hash[x] = diff
+      if nums.include?(diff)
+        hash[index] = item
+        nums.delete_at(index)
+        # nums[index].pop
+        x = nums.find_index(diff) + 1
+        hash[x] = diff
+      end
     end
   end
-  hash.keys
+  p hash.keys
+  p nums
 end
+
+ary1 = [1,4,5]     # good
+ary2 = [3,3]       # good
+ary = [2,5,5,11]   # good
+tar = 10
+
+two_sum(ary,tar)
+
+## SUBMIT -- Time Limit Execeeded
