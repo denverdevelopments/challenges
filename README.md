@@ -2,6 +2,10 @@
 
 Welcome to Kevin's repo for challenge exercises and tech challenges.  A playground for trying different approaches to problems and developing alternative solutions.
 
+> #### Includes challenges from:
+  - Turing 1-hr limit challenges
+  - Leetcode
+
 
 ### Using 'Challenges' Gem for Format
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/challenges`. To experiment with that code, run `bin/console` for an interactive prompt.
