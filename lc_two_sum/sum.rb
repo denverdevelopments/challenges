@@ -29,9 +29,10 @@ end
 ary1 = [1,4,5]     # good
 ary2 = [3,3]       # good
 ary3 = [2,5,5,11]   # good
-ary = [2..11111]
+ary = [2..11]
 tar = 10
 
-two_sum(ary,tar)
+p ary[0].class
+# two_sum(ary,tar)
 
 ## SUBMIT -- Time Limit Execeeded
