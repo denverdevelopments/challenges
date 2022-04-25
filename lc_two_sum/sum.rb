@@ -5,10 +5,10 @@
 def two_sum(nums, target)
   # hash = Hash.new
   nums.each_with_index do |item,index|
-    diff = target - item
+    diff = target - nums.pop
     if nums.include?(diff)
       hash[index] = item
-      hash[nums.find_index(diff)] = diff
+      hash[nums.find_index(diff)+1] = diff
 
     end
     # diff = target - item
