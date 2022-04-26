@@ -1,0 +1,2 @@
+class Biller < ApplicationRecord
+end
