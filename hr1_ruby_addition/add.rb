@@ -17,7 +17,8 @@ end
 def index_arr_multiple_add(arr, index)
     # add any two elements to the arr at the index
     # arr.insert(index, e1, e2)  ## Wrong -- not needed
+    arr.insert(index, 1, 2)
 end
 
 
-end_arr_add(arr, element)
+# end_arr_add(arr, element)
