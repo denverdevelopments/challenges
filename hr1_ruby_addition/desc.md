@@ -21,17 +21,23 @@ In this challenge, your task is to complete three functions that take in the arr
 4.  Add more than one element after a given index (position)
 
 def end_arr_add(arr, element)
-    # Add `element` to the end of the Array variable `arr` and return `arr`
+    # Add `element` to the end of the Array variable `arr`, return `arr`
 end
 
 def begin_arr_add(arr, element)
-    # Add `element` to the beginning of the Array variable `arr` and return `arr`
+    # Add `element` to the beginning of the Array variable `arr`, return `arr`
 end
 
 def index_arr_add(arr, index, element)
-    # Add `element` at position `index` to the Array variable `arr` and return `arr`
+    # Add `element` at position `index` to the Array variable `arr`, return `arr`
 end
 
 def index_arr_multiple_add(arr, index)
     # add any two elements to the arr at the index
 end
+
+## def index_arr_multiple_add(arr, index) arr.insert(index).push(1, 2) return arr end
+
+## arr.insert(index, 10, 20)
+
+## (arr.unshift(element), arr.insert(index, element))

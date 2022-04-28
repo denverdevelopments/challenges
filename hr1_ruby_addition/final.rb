@@ -1,6 +1,6 @@
 
 def end_arr_add(arr, element)
-    # Add `element` to the end of the Array variable `arr` and return `arr`
+    # Add `element` to the end of the Array variable `arr`, return `arr`
     , ush(element)
 end
 
@@ -16,9 +16,8 @@ end
 
 def index_arr_multiple_add(arr, index, e1, e2)
     # add any two elements to the arr at the index
-    arr.insert(index, e1, e2)
+    # arr.insert(index, e1, e2)  ## Wrong -- not needed
 end
-## Wrong -- not needed
 
 
 end_arr_add(arr, element)
