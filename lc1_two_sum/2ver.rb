@@ -36,10 +36,3 @@ tar = 6 #10
 two_sum(ary2,tar)
 
 ## SUBMIT -- Time Limit Execeeded
-
-# has_many :bills
-#
-#
-# def total_bills
-#
-# end
