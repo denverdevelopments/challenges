@@ -1,43 +1,40 @@
-Arrays provide a variety of methods that allow to add elements to them.
+The array class has various methods of removing elements from the array.
 
-push allows one to add an element to the end of the list.
- >x = [1,2]
- >x.push(3)
- => [1,2,3]
-insert allows one to add one or more elements starting from a given index (shifting elements after the given index in the process).
- >x = [1,2]
- >x.insert(1, 5, 6, 7)
- => [1, 5, 6, 7, 2]
-unshift allows one or more elements to be added at the beginning of the list.
- >x = [1,2,3]
- >x.unshift(10, 20, 30)
- => [10, 20, 30, 1, 2, 3]
+Let's look at the array
 
-In this challenge, your task is to complete three functions that take in the array arr and
+ arr = [5, 6, 5, 4, 3, 1, 2, 5, 4, 3, 3, 3]
+Delete an element from the end of the array
+ > arr.pop
+ => 3
+Delete an element from the beginning of the array
+ > arr.shift
+ => 5
+Delete an element at a given position
+ > arr.delete_at(2)
+ => 4
+Delete all occurrences of a given element
+ > arr.delete(5)
+ => 5
+ > arr
+ => [6, 3, 1, 2, 4, 3, 3]
+Your task is to complete the functions below using syntax as explained above.
 
-1.  Add an element to the end of the list
-2.  Add an element to the beginning of the list
-3.  Add an element after a given index (position)
-4.  Add more than one element after a given index (position)
+def end_arr_delete(arr)
+    # delete the element from the end of the array and return the deleted element
 
-def end_arr_add(arr, element)
-    # Add `element` to the end of the Array variable `arr`, return `arr`
 end
 
-def begin_arr_add(arr, element)
-    # Add `element` to the beginning of the Array variable `arr`, return `arr`
+def start_arr_delete(arr)
+    # delete the element at the beginning of the array and return the deleted element
+
 end
 
-def index_arr_add(arr, index, element)
-    # Add `element` at position `index` to the Array variable `arr`, return `arr`
+def delete_at_arr(arr, index)
+    # delete the element at the position #index
+
 end
 
-def index_arr_multiple_add(arr, index)
-    # add any two elements to the arr at the index
+def delete_all(arr, val)
+    # delete all the elements of the array where element = val
+
 end
-
-## def index_arr_multiple_add(arr, index) arr.insert(index).push(1, 2) return arr end
-
-## arr.insert(index, 10, 20)
-
-## (arr.unshift(element), arr.insert(index, element))
