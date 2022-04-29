@@ -1,4 +1,4 @@
-TThe array class also allows to select and return a subset of an array based on some criteria defined in a block (a block is a group of code within {} that accepts a variable and returns a value).
+The array class also allows to select and return a subset of an array based on some criteria defined in a block (a block is a group of code within {} that accepts a variable and returns a value).
 
 Selecting elements that satisfy a given criteria
 Rejecting elements that satisfy a given criteria
