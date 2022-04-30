@@ -29,23 +29,37 @@
 #   p total
 # end
 
-# arr = [1, 3, 5, 2, 10]  ##sum = 49
-# getMinimumCost(arr)
 
 def getMinimumCost(arr)
-
-  arr.each_with_index(n, i)
-    while i != arr.size
-      # big ||= [big, abs(arr[i]-arr[i+1])].max
-      if big < abs(arr[i]-arr[i+1])
-        big = abs(arr[i]-arr[i+1])
+  diff = 0
+  arr.each_with_index do |n, i|
+    # while i != (arr.size-1)
+    if i  < (arr.size-1)
+      # diff ||= [diff, abs(arr[i]-arr[i+1])].max
+      if diff < (arr[i]-arr[i+1]).abs()
+        diff = (arr[i]-arr[i+1]).abs()
         spot = i
+        # var = [arr[i], arr[i+1]].min + (diff/2).to_i
       end
-    end
-  end
+      var = [arr[spot], arr[spot+1]].min + (diff/2).to_i
 
+    end
+
+  end
+  p var
+
+  # arr.insert(spot, var)
+  # total = 0
+  # arr.each_with_index do |n, i|
+  #   while i != (arr.size-1)
+  #     total += (arr[spot]-arr[spot+1])**2
+  #   end
+  # end
+  # p total
 end
 
+arr = [1, 3, 5, 2, 10]  ##sum = 49
+getMinimumCost(arr)
 
 # arr = [4, 7, 1, 4]
 # getMinimumCost(arr)
