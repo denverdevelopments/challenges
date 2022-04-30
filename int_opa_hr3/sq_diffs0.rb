@@ -16,7 +16,7 @@ def getMinimumCost(arr)
 
   new_num = [arr[here-1],arr[here]].min + (big_diff/2).to_i
   arr.insert(here,new_num)
-  p arr.length
+  # p arr.length
 
   ind1 = -1
   ind2 = 0
