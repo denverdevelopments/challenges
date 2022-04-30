@@ -3,6 +3,8 @@
 def getMinimumCost(arr)
   diff = 0
   spot = 0
+  total = 0
+
   arr.each_with_index do |n, i|
     # while i != (arr.size-2) ## NO
     if i  < (arr.length-1)
@@ -12,17 +14,13 @@ def getMinimumCost(arr)
         spot = i
       end
     end
-
   end
 
   new_num = [arr[spot], arr[spot+1]].min + (diff/2).to_i
-
   arr.insert((spot+1), new_num)
-  total = 0
+
   arr.each_with_index do |n, i|
-  if i  < (arr.length-1)
-      total += (arr[i]-arr[i+1])**2
-    end
+    total += (arr[i]-arr[i+1])**2 if i < (arr.length-1)
   end
   p total
 end
