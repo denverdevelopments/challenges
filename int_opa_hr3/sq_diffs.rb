@@ -29,10 +29,23 @@
 #   p total
 # end
 
-# arr = [4, 7, 1, 4]
+# arr = [1, 3, 5, 2, 10]  ##sum = 49
 # getMinimumCost(arr)
 
-# r = 0
-# dir = -1
-# (r +=222 && r += 310) if dir == -1
-# p r
+def getMinimumCost(arr)
+
+  arr.each_with_index(n, i)
+    while i != arr.size
+      # big ||= [big, abs(arr[i]-arr[i+1])].max
+      if big < abs(arr[i]-arr[i+1])
+        big = abs(arr[i]-arr[i+1])
+        spot = i
+      end
+    end
+  end
+
+end
+
+
+# arr = [4, 7, 1, 4]
+# getMinimumCost(arr)
