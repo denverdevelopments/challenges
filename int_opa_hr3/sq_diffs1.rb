@@ -1,12 +1,10 @@
 def getMinimumCost(arr)
   index = -1
-  # index2 = 0
   big_diff = 0
   here = 0
 
   (arr.length - 1).times do
     index += 1
-    # index2 += 1
     diff = (arr[index] - arr[index+1]).abs
     if diff > big_diff
       big_diff = diff
@@ -19,11 +17,9 @@ def getMinimumCost(arr)
   p arr.length
 
   ind = -1
-  # ind2 = 0
   total = 0
   (arr.length - 1).times do
     ind += 1
-    # ind2 += 1
     total += (arr[ind] - arr[ind+1])**2
   end
   p total
