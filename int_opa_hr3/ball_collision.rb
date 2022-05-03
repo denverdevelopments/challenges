@@ -1,3 +1,7 @@
+# KNOWNS: one axis of dir., left or right equating to -1 or 1
+#         each ball moving at same non-zero speed
+#         strength is only other characteristic, higher str destroys lower
+
 def findRemainingBalls(dir, str)
   remain = []
   index = -1
