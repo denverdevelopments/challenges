@@ -3,4 +3,5 @@ def iter_hash(hash)
      puts arr[0]
      puts arr[1]
   end
+  # OR v2    hash.each do |key, value|
 end
