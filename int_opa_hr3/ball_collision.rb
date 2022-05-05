@@ -3,6 +3,14 @@
 #         strength is only other characteristic, higher str destroys lower
 
 def findRemainingBalls(dir, str)
+  #NO find strongest ball, it's strength, position, direction.
+
+# create ball class,
+# find first ball going right
+# loop/interate traverse thru until no collisions
+
+# STEP-by-STEP/
+
   remain = []
   index = -1
   size = dir.length
