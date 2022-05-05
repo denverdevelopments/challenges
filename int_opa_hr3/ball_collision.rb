@@ -17,7 +17,16 @@ def findRemainingBalls(dir, str)
   # size = dir.length
   # big_ind = str.find_index(str.max)
 
+  # case 1 all same dir, no collision. LLL or RRR
+  if dir.uniq.size == 1 ##end
+    dir_left = dir
+    str_left = str
+  # case 2 all same dir except either end, no collision.
+  # LLLR, LLRR, LRRR
+  elsif
 
+
+  elsif
     # add conditional, if all the direction values are 1, or -1, return a new array of incrementing integers from 0 to (n - 1)
     if dir.first == -1
       dir_left.push(dir.shift)
