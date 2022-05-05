@@ -8,15 +8,22 @@ def findRemainingBalls(dir, str)
 # create ball class,
 # find first ball going right
 # loop/interate traverse thru until no collisions
-
 # STEP-by-STEP/
 
-  remain = []
+  dir_left = []
+  store_left = []
   index = -1
-  size = dir.length
-  big_ind = str.find_index(str.max)
+  # remain = []
+  # size = dir.length
+  # big_ind = str.find_index(str.max)
 
-# add conditional, if all the direction values are 1, or -1, return a new array of incrementing integers from 0 to (n - 1)
+
+    # add conditional, if all the direction values are 1, or -1, return a new array of incrementing integers from 0 to (n - 1)
+    if dir.first == -1
+      dir_left.push(dir.shift)
+      str_left.push(str.shift)
+    end
+
 
   # dir.each_with_index
   (size-1).times do
@@ -38,7 +45,8 @@ def findRemainingBalls(dir, str)
     if (index + 1) == (size-1) && dir[(index + 1)] == 1
       remain << (size -1)
     end
-  end
+
+  p remain
 
 end
 
