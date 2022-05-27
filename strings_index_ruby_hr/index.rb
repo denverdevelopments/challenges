@@ -1,16 +1,6 @@
 
-# def transcode(string_in)
-#   string_in.encoding
-# end
-
-def transcode(str)
-  str.force_encoding('UTF-8')
+def serial_average(str)
+  avg = ((str[4,5].to_f + str[10,5].to_f)/2).to_s
+  str[4,11] = ' '
+  str.strip + sprintf('%.2f', avg)
 end
-
-# def transcode(str)
-#     str.encode('UTF-8')
-# end
-#
-# def transcode
-#   encoding
-# end
