@@ -1,4 +1,8 @@
 
-def transcode(string_in)
+# def transcode(string_in)
+#   string_in.encoding
+# end
 
-end 
+def transcode
+  encoding
+end
