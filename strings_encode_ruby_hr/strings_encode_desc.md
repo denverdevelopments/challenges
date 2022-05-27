@@ -1,8 +1,9 @@
 In Ruby, strings are objects of the String class, which defines a powerful set of operations and methods for manipulating text (e.g., indexing, searching, modifying, etc.). Here are a few easy ways to create Strings:
 
-my_string = "Hello." # create a string from a literal
-my_empty_string = String.new # create an empty string
-my_copied_string = String.new(my_string) # copy a string to a new variable
+### my_string = "Hello." # create a string from a literal
+### my_empty_string = String.new # create an empty string
+### my_copied_string = String.new(my_string) # copy a string to a new variable
+
 Until Ruby , Strings were nothing but a collection of bytes. Data was indexed by byte count, size was in terms of number of bytes, and so on. Since Ruby , Strings have additional encoding information attached to the bytes which provides information on how to interpret them. For example, this code:
 
 str = "With ♥!"
@@ -23,7 +24,7 @@ A String's bytesize corresponds to the actual space taken by the characters in m
 Although  is the most popular (and recommended) encoding style for content, Ruby supports  other encodings (try  for the full list). With this in mind, we should learn how to convert between different encodings.
 
 Task
-In this challenge, we practice setting the encoding information for some string of text using Ruby's Encoding methods. Write a function named transcode which takes a  encoded string as a parameter, converts it to an  encoded string, and returns the result.
+In this challenge, we practice setting the encoding information for some string of text using Ruby's Encoding methods. Write a function named transcode which takes a  encoded string as a parameter, converts it to an encoded string, and returns the result.
 
 Input Format
 
