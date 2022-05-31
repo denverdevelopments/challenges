@@ -1,53 +1,34 @@
-When you index a string, you extract or alter the portions. This is perhaps the most important operation you want to perform on strings. The string class provides a convenient array-like square bracket [] operator, which allows you to extract portions of the string as well as altering the content when used on the left side of an assignment.
+In our encoding tutorial, we learned about the different ways Ruby 1.8 and Ruby 1.9 (and higher versions) represent strings internally. The major difference is a wide range of encoding (non-ascii) support in the later versions. This change, however, also overhauls the way strings were iterated between the two versions.
 
-Consider the following examples:
+In Ruby 1.8, there's a single each method (remember Enumerable?) which allowed it to iterate over lines of data. While it might seem like a logical option to have, how would one go about iterating on each byte or each character? It turns out that it was not so clean, and people had to resort to tricks for some of these functionalities.
 
-> str = "Hello World!"
-> str[str.size-1]
-"!"
-> str[-1] # first character from the end of the string
-"!"
-> str[-2] # second last character
-"d"
-> str[0] # first character
-"H"
-More often, you'd want to extract specific portions of the string rather than individual characters. To do this, use comma separated operands between the square brackets. The first operand specifies an index (which may be negative), and the second specifies a length (which must be non-negative).
+With Ruby 1.9, each was removed from the String class and is no longer an Enumerable. Instead, we have more explicit choices based on what we need to iterate - bytes, chars, lines or codepoints.
 
-Consider the example below:
-
-> str[0,4] # first four characters
-"Hell"
-> str[6,3] # 3 characters starting from index 6 ( 0-indexing )
-"Wor"
-> str[-1, 1] # 1 character starting from the END of string
-"!"
-The same examples shown above can be used for assignment / deletion of characters. We can insert characters by giving a non-empty assignment or delete characters in the range by giving an empty assignment.
-
-Consider the example below:
-
-> str = "Hello"
-> str[str.size, 0] = " World!" # append by assigning at the end of the string
-> str
-"Hello World!"
-> str[5, 0] = "," # insert a comma after the 5th position
-> str[5, 6] = ""  # delete 6 characters starting from index 5.
-"Hello!"
-> str[5,1] = " World" # replace the string starting from index 5 and of length 1 with the given string.
-But wait, there's more! Ruby also allows you to index strings using a Range or a Regexp object as well. We will discuss these methods in the future.
-
-In this challenge, your task is to code a serial_average method which is described below:
-
-It takes a fixed width string in format: SSS-XX.XX-YY.YY. SSS is a three digit serial number, XX.XX and YY.YY are two digit numbers including up to two decimal digits.
-It returns a string containing the answer in format SSS-ZZ.ZZ where SSS is the serial number of that input string, and ZZ.ZZ is the average of XX.XX and YY.YY.
-All numbers are rounded off to two decimal places.
+each_byte iterates sequentially through the individual bytes that comprise a string;
+each_char iterates the characters and is more efficient than [] operator or character indexing;
+each_codepoint iterates over the ordinal values of characters in the string;
+each_line iterates the lines.
 For example:
 
-> serial_average('002-10.00-20.00')
-"002-15.00"
-You can use string interpolation to insert Ruby code within a string.
+> money = "¥1000"
+> money.each_byte {|x| p x} # first char represented by two bytes
+194
+165
+49
+48
+48
+48
+> money.each_char {|x| p x} # prints each character
+"¥"
+"1"
+"0"
+"0"
+"0"
+Without a doubt, Ruby 1.9 makes iteration easier to understand and implement. Hence, we'll stick with Ruby 1.9 and later versions for current and other challenges (unless otherwise stated).
+
+Challenge: Write the method count_multibyte_char which takes a string as input and returns the number of multibyte characters (byte size > 1) in it.
 
 For example:
 
-> tmp = 123
-> "Hello #{tmp}"
-Hello 123
+> count_multibyte_char('¥1000')
+1
