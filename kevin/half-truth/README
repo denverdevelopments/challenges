@@ -1,0 +1,5 @@
+Write code that reads lines from the input file. Each line
+contains a variable number of booleans (true/false) separated by a
+space. Your code should print `true` if some of the parameters
+are true, but not all of the parameters are true. Otherwise your
+function should print `false`.
