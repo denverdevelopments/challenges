@@ -1,4 +1,8 @@
+#1.  Read in each line
+# File.foreach("input.txt") { |line| p line.split }
 
+#2.  Find space separators, breakup each indiv. booleans
+# File.each do |line|
 
 File.foreach("input.txt") do |line|
   all_booleans = line.splice(" ")
@@ -12,11 +16,13 @@ File.foreach("input.txt") do |line|
   end
 end
 
-#1.  Read in each line
-# File.foreach("input.txt") { |line| p line.split }
+def booleans()
+  # yield
+end
 
-#2.  Find space separators, breakup each indiv. booleans
-# File.each do |line|
+booleans() do
+  p "Hello World"
+end
 
 #3.  Find number of booleans on lines (num)
 
