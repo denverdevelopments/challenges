@@ -1,7 +1,6 @@
 #1  Read in each lines
 
-#2  Break up numbers by space
-
+#2  Check if is remainder
 
 File.foreach("input.txt") do |line|
   pair = line.split
@@ -34,10 +33,4 @@ end
 #   end
 # end
 
-#3.  Find number of booleans on lines (num)
-
-#4.  See if there are any count of 'true' values
-
-#5.  If count greater than zero and less than number, return 'true'
-
-#6.  Else return 'false'
+#3.
