@@ -7,10 +7,10 @@ File.foreach("input.txt") do |line|
   num = pair.first.to_i
   base = pair.last.to_i
   print remainder = num % base
-  # until remainder < base do
+  until remainder < base do
   #   remainder = remainder / base
     p remainder
-  # end
+  end
   # p \n
 
 end
