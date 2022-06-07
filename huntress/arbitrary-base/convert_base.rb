@@ -4,12 +4,13 @@
 
 File.foreach("input.txt") do |line|
   pair = line.split
-  num = pair.first.to_i
-  base = pair.last.to_i
-  print remainder = num % base
-  until remainder < base do
-  #   remainder = remainder / base
-    p remainder
+  p num = pair.first.to_i
+  p base = pair.last.to_i
+  p remainder = num % base
+  while remainder > base do
+    rem = remainder % base
+    p rem #ainder
+    remainder = rem
   end
   # p \n
 
