@@ -10,14 +10,14 @@ File.foreach("input.txt") do |line|
     #   File.write("newput.txt", answer.reverse.join(' ')+"\n", mode: "a")
     #   return
     # end
-  answer = []
+  # answer = []
   answer = num == 0 ? [0] : []  #ternary
 
   # answer = ""
   # remainder = num % base
     # answer << (num % base)
     # num = num / base
-  answer = [0] if num == 0
+  # answer = [0] if num == 0
 
  ## recursion, w/o reverse
 
@@ -29,7 +29,7 @@ File.foreach("input.txt") do |line|
     # remainder = rem
   end
   # answer << (num % base)
-  File.write("newput.txt", answer.reverse.join(' ')+"\n", mode: "a")
+  File.write("new_out.txt", answer.reverse.join(' ')+"\n", mode: "a")
   # p answer.reverse.join(' ')
   # print answer.reverse.map {|n| p}
 
