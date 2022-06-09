@@ -6,11 +6,20 @@ File.foreach("input.txt") do |line|
   pair = line.split
   num = pair.first.to_i
   base = pair.last.to_i
+    # if num == 0
+    #   File.write("newput.txt", answer.reverse.join(' ')+"\n", mode: "a")
+    #   return
+    # end
   answer = []
+  answer = num == 0 ? [0] : []  #ternary
+
   # answer = ""
   # remainder = num % base
     # answer << (num % base)
     # num = num / base
+  answer = [0] if num == 0
+
+
   # while num > base do
   until num < 1 do
     rem = num % base
