@@ -19,6 +19,7 @@ File.foreach("input.txt") do |line|
     # num = num / base
   answer = [0] if num == 0
 
+ ## recursion, w/o reverse
 
   # while num > base do
   until num < 1 do
