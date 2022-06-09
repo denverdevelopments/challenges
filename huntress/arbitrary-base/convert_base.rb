@@ -1,16 +1,19 @@
-#1  Read in each lines
+#1  Read in each line
 
-#2  Break up number and base
+#2  Break up into number and base
 
-#3  Set values for number and base, convert them fron string to integer
+#3  Set values for number and base, convert from string to integer
 
-#3  Note: divident / divisor = quotient, remainder.
+#3  Note: dividend / divisor = quotient, remainder.
 
-#4  Create string or array to contain quotient values and remainder, for end output.
+#4  Create string or array to contain quotients & remainder, for end output.
 
-#5  Repeat loop until quotient = 0, divide quotient by base, storing quotients.
+#5  Repeat loop until quotient = 0 or rem less than base, divide quotient by
+# base, storing quotients.
 
-#6  Output string/array container, last entries first (ie reversed), write to new file.
+#6  Output string/array container, last entries first (ie reversed), write
+# to new output file.
+
 
 File.foreach("input.txt") do |line|
   pair = line.split
@@ -21,42 +24,16 @@ File.foreach("input.txt") do |line|
   # answer = [0] if num == 0
   answer = num == 0 ? [0] : []  #ternary for '0' case
 
-  # remainder = num % base
-    # answer << (num % base)
-    # num = num / base
-
- ## recursion, w/o reverse
-
-  # while num > base do
+  # while num > 1 do
   until num < 1 do
     quotient = num % base
     answer << quotient
     num = num / base
-    # remainder = rem
   end
   # answer << (num % base)
-  File.write("new_out.txt", answer.reverse.join(' ')+"\n", mode: "a")
-  # p answer.reverse.join(' ')
-  # print answer.reverse.map {|n| p}
+  File.write("new_output.txt", answer.reverse.join(' ')+"\n", mode: "a")
 
 end
 
-#1.  Read in each line
-# File.foreach("input.txt") { |line| p line.split }
 
-#2.  Find space separators, breakup each indiv. booleans
-# File.each do |line|
-
-# File.foreach("input.txt") do |line|
-#   all_booleans = line.splice(" ")
-#   # all_booleans = line.split
-#   total = all_booleans.size
-#   actual = all_booleans.count("true")
-#   if actual > 0 && actual < total
-#     p true
-#   else
-#     p false
-#   end
-# end
-
-#3.
+## try:  recursion, w/o reverse, or ?answer.reverse.map {|n| n+" "}
