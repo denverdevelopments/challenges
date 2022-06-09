@@ -29,7 +29,7 @@ File.foreach("input.txt") do |line|
     # remainder = rem
   end
   # answer << (num % base)
-  File.write("new_out.txt", answer.reverse.join(' ')+"\n", mode: "a")
+  File.write("new_out.txt", answer.reverse.join(' ')+"#{true}"+"\n", mode: "a")
   # p answer.reverse.join(' ')
   # print answer.reverse.map {|n| p}
 
