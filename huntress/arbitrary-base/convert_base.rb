@@ -4,15 +4,24 @@
 
 File.foreach("input.txt") do |line|
   pair = line.split
-  p num = pair.first.to_i
-  p base = pair.last.to_i
-  p remainder = num % base
-  while remainder > base do
-    rem = remainder % base
-    p rem #ainder
-    remainder = rem
+  num = pair.first.to_i
+  base = pair.last.to_i
+  answer = []
+  # answer = ""
+  # remainder = num % base
+    # answer << (num % base)
+    # num = num / base
+  # while num > base do
+  until num < 1 do
+    rem = num % base
+    answer << rem
+    num = num / base
+    # remainder = rem
   end
-  # p \n
+  # answer << (num % base)
+  File.write("newput.txt", answer.reverse.join(' ')+"\n", mode: "a")
+  # p answer.reverse.join(' ')
+  # print answer.reverse.map {|n| p}
 
 end
 
