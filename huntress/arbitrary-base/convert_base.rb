@@ -24,8 +24,8 @@ File.foreach("input.txt") do |line|
   # answer = [0] if num == 0
   answer = num == 0 ? [0] : []  #ternary for '0' case
 
-  # while num > 1 do
-  until num < 1 do
+  # until num < 1 do
+  while num > 1 do
     # quotient = num % base
     # answer << quotient
     answer << (num % base)
@@ -35,6 +35,5 @@ File.foreach("input.txt") do |line|
   File.write("new_output.txt", answer.reverse.join(' ')+"\n", mode: "a")
 
 end
-
 
 ## try:  recursion, w/o reverse, or ?answer.reverse.map {|n| n+" "}
