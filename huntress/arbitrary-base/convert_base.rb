@@ -16,9 +16,9 @@
 
 
 File.foreach("input.txt") do |line|
-  pair = line.split
-  num = pair.first.to_i
-  base = pair.last.to_i
+  # pair = line.split
+  num = line.split.first.to_i
+  base = line.split.last.to_i
 
   # answer = [] # no good when num = 0
   # answer = [0] if num == 0
@@ -26,8 +26,9 @@ File.foreach("input.txt") do |line|
 
   # while num > 1 do
   until num < 1 do
-    quotient = num % base
-    answer << quotient
+    # quotient = num % base
+    # answer << quotient
+    answer << (num % base)
     num = num / base
   end
   # answer << (num % base)
