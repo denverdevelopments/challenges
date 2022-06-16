@@ -1,7 +1,8 @@
 # @param {String} s
 # @return {Integer}
 def roman_to_int(s)
-
+  .upcase
+  .count('IV')
 
 
 end
@@ -20,9 +21,10 @@ end
 # p two_sum(ary,tar)
 
 #1.  Read string by letter form left to right (array.shift)
+    # s.upcase
     #push back into new array after evaluating
 #2.  Check if next letter is bigger, for subtraction
-
+    #OR adjust for each of 6 special cases. -2 IV and IX, -20 XL XC, -200 CD CM
 #3.  Add correct value to total (start at 0)
 
 #4.  Repeat eval process, add new value to total
