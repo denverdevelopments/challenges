@@ -2,18 +2,18 @@
 # @return {Integer}
 def roman_to_int(s)
   s = s.delete(" ").upcase
-  ary = s.chars  #or split("")
-  del2 = s.count('IV') + s.count("IX")      #wrong count
-  del20 = s.count('XL') + s.count("XC")
-  del200 = s.count('CD') + s.count("CM")
+  ary = s.chars             #or split("")
+  # del2 = s.count('IV') + s.count("IX")      #wrong count
+  del2 = s.scan(/IV/).length + s.scan(/IX/).length
+  del20 = s.scan(/XL/).length + s.scan(/XC/).length
+  del200 = s.scan(/CD/).length + s.scan(/CM/).length
   add = ary.count("I")+ary.count("V")*5+ary.count("X")*10+ary.count("L")*50+ary.count("C")*100+ary.count("D")*500+ary.count("M")*1000
-  require "pry"; binding.pry
   total = add - del2*2 - del20*20 - del200*200
 end
 
-n = "IXIVII"  #No-19
-n2 = "LVIII"  #Yes-58
-n3 = "MCMXCIV"  #No-2216
+n1 = "IXIVII"
+n2 = "LVIII"
+n = "MCMXCIV"
 p roman_to_int(n)
 
 
