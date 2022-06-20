@@ -11,9 +11,9 @@ def roman_to_int(s)
   total = add - del2*2 - del20*20 - del200*200
 end
 
-n1 = "IXIVII"
-n2 = "LVIII"
-n = "MCMXCIV"
+n1 = "IXIVII"  #pass
+n2 = "LVIII"  #pass
+n = "MCMXCIV"  #pass
 p roman_to_int(n)
 
 

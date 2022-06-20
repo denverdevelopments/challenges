@@ -1,32 +1,42 @@
-# @param {String} s
-# @return {Integer}
-def roman_to_int(s)
-  .upcase
-  .count('IV')
+# @param {Integer[]} nums
+# @param {Integer} target
+# @return {Integer[]}
 
-
+def two_sum(nums, target)
+  hash = Hash.new
+  nums.each_with_index do |item,index|
+    diff = target - nums.pop
+    if nums.include?(diff)
+      hash[index] = item
+      hash[nums.find_index(diff)+1] = diff
+    end
+    # diff = target - item
+    # if nums.uniq.length == nums.length
+    #   if nums.include?(diff) && item != diff
+    #     x = nums.find_index(diff)
+    #     hash[index] = item
+    #     hash[x] = diff
+    #   end
+    # elsif
+    #   if nums.include?(diff)
+    #     hash[index] = item
+    #     nums.delete_at(index)
+    #     # nums[index].pop
+    #     x = nums.find_index(diff) + 1
+    #     hash[x] = diff
+    #   end
+    # end
+  end
+  p hash.keys
+  p nums
 end
 
-  # hash = Hash.new
-  # nums.each_with_index do |item,index|
-  #   diff = target - nums.pop
-  #   if nums.include?(diff)
-  #     hash[index] = item
-  #     hash[nums.find_index(diff)+1] = diff
-  #   end
-  # end
-  # p hash.keys
-  # p nums
+ary1 = [1,4,5]     # good
+ary2 = [3,3]       # good
+ary3 = [2,5,5,11]   # good
+ary = [*2..11]
+tar = 20
 
-# p two_sum(ary,tar)
+two_sum(ary,tar)
 
-#1.  Read string by letter form left to right (array.shift)
-    # s.upcase
-    #push back into new array after evaluating
-#2.  Check if next letter is bigger, for subtraction
-    #OR adjust for each of 6 special cases. -2 IV and IX, -20 XL XC, -200 CD CM
-#3.  Add correct value to total (start at 0)
-
-#4.  Repeat eval process, add new value to total
-
-#5.  Stop after last array entry, return total
+## SUBMIT -- Time Limit Execeeded
