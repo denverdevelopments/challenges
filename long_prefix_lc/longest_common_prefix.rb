@@ -1,13 +1,19 @@
 # @param {String[]} strs
 # @return {String}
+
+## del2 = s.scan(/IV/).length
+# [x,y].min { |x,y| x.size <=> y.size }
+# str[1..-1]
+
 def longest_common_prefix(strs)
-  strs.min_by #length
-  del2 = s.scan(/IV/).length + s.scan(/IX/).length
+  short = strs.min_by(&:length)
+  short.slice!(0)
 
 end
 
 
 #1.  Find shortest string
+    # by str min length
 
 #2.  Check if first letter is same in other 2 words
 
