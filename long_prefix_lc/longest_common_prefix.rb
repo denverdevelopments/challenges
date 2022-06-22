@@ -1,20 +1,19 @@
 # @param {String[]} strs
 # @return {String}
 
-## del2 = s.scan(/IV/).length
 # [x,y].min { |x,y| x.size <=> y.size }
 # str[1..-1]
+# short = strs.min_by(&:length)
+# while short.slice!(0) == strs[1].first
 
 def longest_common_prefix(strs)
-  # short = strs.min_by(&:length)
-  # while short.slice!(0) == strs[1].first
   ltr = 0
   out = ''
   while strs.first[ltr] == strs.first[ltr] && strs.first[ltr] == strs.last[ltr]
     out += strs.first[ltr]
     ltr += 1
   end
-  out 
+  out   #= '' if out.nil?
 end
 
 
