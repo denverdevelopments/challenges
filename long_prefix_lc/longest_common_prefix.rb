@@ -8,12 +8,14 @@
 
 def longest_common_prefix(strs)
   ltr = 0
-  out = ''
+  out = String.new
+  # out = ''
   while strs.first[ltr] == strs.first[ltr] && strs.first[ltr] == strs.last[ltr]
+    # out.concat(strs.first[ltr])
     out += strs.first[ltr]
     ltr += 1
   end
-  out   #= '' if out.nil?
+  out   #= '' if out.nil? OR .to_s
 end
 
 
