@@ -22,12 +22,12 @@ def two_sum(nums, target)
       end
     end
   end
-  p hash.keys
-  p nums
+  # p hash.keys
+  # p nums
 end
 
-ary1 = [1,4,5]     # good
-ary2 = [3,3]       # good
+# ary1 = [1,4,5]     # good
+# ary2 = [3,3]       # good
 ary = [2,5,5,11]   # good
 tar = 10
 
