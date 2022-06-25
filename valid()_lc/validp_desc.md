@@ -1,22 +1,26 @@
-Write a function to find the longest common prefix string amongst an array of strings.
+Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
-If there is no common prefix, return an empty string "".
+An input string is valid if:
 
+Open brackets must be closed by the same type of brackets.
+Open brackets must be closed in the correct order.
 
 
 Example 1:
 
-Input: strs = ["flower","flow","flight"]
-Output: "fl"
+Input: s = "()"
+Output: true
 Example 2:
 
-Input: strs = ["dog","racecar","car"]
-Output: ""
-Explanation: There is no common prefix among the input strings.
+Input: s = "()[]{}"
+Output: true
+Example 3:
+
+Input: s = "(]"
+Output: false
 
 
 Constraints:
 
-1 <= strs.length <= 200
-0 <= strs[i].length <= 200
-strs[i] consists of only lowercase English letters.
+1 <= s.length <= 104
+s consists of parentheses only '()[]{}'.

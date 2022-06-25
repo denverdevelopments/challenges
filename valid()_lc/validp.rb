@@ -1,20 +1,11 @@
-# @param {String[]} strs
-# @return {String}
+# @param {String} s
+# @return {Boolean}
 
-# [x,y].min { |x,y| x.size <=> y.size }
-# str[1..-1]
-# short = strs.min_by(&:length)
-# while short.slice!(0) == strs[1].first
-
-def longest_common_prefix(strs)
+def is_valid(s)
   ltr = 0
   out = String.new
   # out = ''
-  while strs.first[ltr] == strs.first[ltr] && strs.first[ltr] == strs.last[ltr]
-    # out.concat(strs.first[ltr])
-    out += strs.first[ltr]
-    ltr += 1
-  end
+
   out   #= '' if out.nil? OR .to_s
 end
 
