@@ -2,13 +2,15 @@
 # @return {Boolean}
 
 def is_valid(s)
-  ltr = 0
-  out = String.new
-  # out = ''
 
-  out   #= '' if out.nil? OR .to_s
+  s.size
 end
 
+
+# s.size
+# s.strip
+# s..gsub(/\s+/, "")
+# s.delete(" ")
 
 #1.  Find shortest string
     # by str min length
