@@ -2,8 +2,8 @@
 # @return {Boolean}
 
 def is_valid(s)
+  return false if s.size % 2 == 1
 
-  s.size
 end
 
 
@@ -11,11 +11,12 @@ end
 # s.strip
 # s..gsub(/\s+/, "")
 # s.delete(" ")
+# "()[]{}"
 
-#1.  Find shortest string
-    # by str min length
+#1.  Must have even number of characters
+    # by str.size
 
-#2.  Check if first letter is same in other 2 words
+#2.  Find innermost bracket 
 
 #3.  If first is true, check first two letters
 
