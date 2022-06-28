@@ -12,11 +12,14 @@ end
 # s..gsub(/\s+/, "")
 # s.delete(" ")
 # "()[]{}"
+# "hello".index(?e)              #=> 1
+# "hello".index(/[aeiou]/, -3)   #=> 4
 
 #1.  Must have even number of characters
     # by str.size
 
-#2.  Find innermost bracket 
+#2.  Find innermost bracket, by finding first end bracket
+  # search string for ')]}',  str.index(/[)]}]/)
 
 #3.  If first is true, check first two letters
 
