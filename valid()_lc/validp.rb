@@ -3,7 +3,9 @@
 
 def is_valid(s)
   return false if s.size % 2 == 1
-  # .
+  [s.index(')'),s.index(']'),s.index('}')].min
+
+  # s.index(/[)]}]/)
 end
 
 
@@ -22,9 +24,8 @@ end
   # search string for ')]}',  str.index(/[)]}]/)
   # smallest index for a closing bracket, or biggest index of open
 
-#3.
+#3.  OR find first close bracket index, check if matching is right next
 
-#4.  Repeat until false
-  # When different, return to previous string
+#4.  If legal pair is found, delete from str.  Repeat
 
-#5.  Stop after last array entry, return total
+#5.
