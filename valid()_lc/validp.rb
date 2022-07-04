@@ -3,9 +3,16 @@
 
 def is_valid(s)
   return false if s.size % 2 == 1
-  [s.index(')'),s.index(']'),s.index('}')].min
+  until false
+    in = [s.index(']'),s.index(/[)}]/)].min
+    case s[in]
+    when ')'
 
-  # s.index(/[)]}]/)
+    when ']'
+      
+    else
+    end
+  end
 end
 
 
@@ -16,6 +23,8 @@ end
 # "()[]{}"
 # "hello".index(?e)              #=> 1
 # "hello".index(/[aeiou]/, -3)   #=> 4
+# s.index(/[)]}]/)
+
 
 #1.  Must have even number of characters
     # by str.size
