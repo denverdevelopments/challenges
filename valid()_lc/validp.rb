@@ -16,6 +16,7 @@ def is_valid(s)
       return false if s[in-1] != "{"
       s.delete("{}")
     end
+    return true if s == nil || s == ""
   end
 end
 
