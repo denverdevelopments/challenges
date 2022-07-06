@@ -8,13 +8,13 @@ def is_valid(s)
     case s[in]
     when ')'
       return false if s[in-1] != "("
-
+      s.delete("()")
     when ']'
       return false if s[in-1] != "["
-
+      s.delete("[]")
     else
       return false if s[in-1] != "{"
-
+      s.delete("{}")
     end
   end
 end
