@@ -4,16 +4,16 @@
 def is_valid(s)
   return false if s.size % 2 == 1
   until false # or nil
-    in = [s.index(']'),s.index(/[)}]/)].min
-    case s[in]
+    ind = [s.index(']'),s.index(/[)}]/)].min
+    case s[ind]
     when ')'
-      return false if s[in-1] != "("
+      return false if s[ind-1] != "("
       s.delete("()")
     when ']'
-      return false if s[in-1] != "["
+      return false if s[ind-1] != "["
       s.delete("[]")
     else
-      return false if s[in-1] != "{"
+      return false if s[ind-1] != "{"
       s.delete("{}")
     end
     return true if s == nil || s == ""
