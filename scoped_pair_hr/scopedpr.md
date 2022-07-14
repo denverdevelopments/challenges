@@ -1,26 +1,13 @@
-Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+Given string array, check scoped rank of sub strings (ie bc, def)
 
-An input string is valid if:
+Input:
+6
+a{bc{}def}
+r{bc{}def}
+a{$}
+r{}
 
-Open brackets must be closed by the same type of brackets.
-Open brackets must be closed in the correct order.
-
-
-Example 1:
-
-Input: s = "()"
-Output: true
-Example 2:
-
-Input: s = "()[]{}"
-Output: true
-Example 3:
-
-Input: s = "(]"
-Output: false
-
-
-Constraints:
-
-1 <= s.length <= 104
-s consists of parentheses only '()[]{}'.
+Output:
+2
+true
+false

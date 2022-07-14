@@ -39,7 +39,7 @@ def scope_congruent(input_str)
 
   if input_str.size < 1 || input_str % 2 == 1
     return "Invalid input array"
-else
+  else
     pairs = input_str.size / 2
     output  = []
 
@@ -69,11 +69,11 @@ else
             output.push(false)
         end
     end
-end
+  end
 
-output.each do |result|
-    p result
-end
+  output.each do |result|
+      p result
+  end
 end
 
 
