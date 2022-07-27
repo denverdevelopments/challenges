@@ -10,8 +10,11 @@ resp.values.select |k,v| do
   when String
     resp.delete!(k)
   when Array
+    (v & ["", "-", "N/A"]).any?
+    v.any? { |i| ["", "-", "N/A"].include? i }
     resp.delete!(k)
   when Hash
+    if resp.values.includes?("") ||
     resp.delete!(k)
   else
   end
